@@ -6,7 +6,7 @@ var Library = /** @class */ (function () {
         this.name = name;
         this.location = location;
         this.mobiles = mobiles;
-        this.totalPrice;
+        this.totalPrice = this.totalPriceCalculation();
     }
     //getter
     Library.prototype.getName = function () {
@@ -42,8 +42,17 @@ var Library = /** @class */ (function () {
         }
         return sumaPrice;
     };
-    Library.prototype.allPrint = function () {
-        return;
+    Library.prototype.printLibrary = function () {
+        for (var i = 0; i < this.mobiles.length; i++)
+            return "The characteristics of the mobile " + this.mobiles[i].getName() + " are:" + "\n" +
+                "Name: " + this.mobiles[i].getName() + "\n" +
+                "Model: " + this.mobiles[i].getModel() + "\n" +
+                "TradeMark: " + this.mobiles[i].getTrademark() + "\n" +
+                "SD Size(GB): " + this.mobiles[i].getSdSize() + "\n" +
+                "Color: " + this.mobiles[i].getColor() + "\n" +
+                "Is 5g?: " + this.mobiles[i].getIs5G() + "\n" +
+                "Number of Cameras: " + this.mobiles[i].getCameraNumber() + "\n" +
+                "Price overal: " + this.totalPrice;
     };
     return Library;
 }());

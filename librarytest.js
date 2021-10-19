@@ -8,4 +8,4 @@ var samsung = new Mobile_1.Mobile("Samsung S10", "S10", "Samsung", 128, "black",
 var xiaomi = new Mobile_1.Mobile("xiaomi note 9", "note 9", "Xiamomi", 100, "black", true, 7, 800);
 var mobiles = [nokia, samsung, iphone, xiaomi];
 var library1 = new mobileLibrary_1.Library("libreria1", "calle Mayor", mobiles);
-console.log(library1.totalPriceCalculation());
+console.log(library1.printLibrary());

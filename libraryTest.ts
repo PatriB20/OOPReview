@@ -7,7 +7,9 @@ let samsung: Mobile = new Mobile("Samsung S10","S10","Samsung",128,"black",false
 let xiaomi: Mobile = new Mobile("xiaomi note 9","note 9","Xiamomi",100,"black",true,7,800);
 
 
-let mobiles=[nokia,samsung,iphone,xiaomi]
+let mobiles:Mobile[]=[nokia,samsung,iphone,xiaomi]
 
  let library1: Library = new Library ("libreria1","calle Mayor",mobiles)
-  console.log(library1.totalPriceCalculation())
+  
+
+console.log(library1.printLibrary())

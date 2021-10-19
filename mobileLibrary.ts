@@ -5,13 +5,18 @@ export class Library{
     private location:string;
     private mobiles: Mobile[];
     private totalPrice: number;
+  
+   
+        
+    
 
-    constructor(name:string,location:string,mobiles:Mobile[])
+    constructor(name:string,location:string,mobiles:Mobile[]) 
     {
         this.name=name
         this.location=location
         this.mobiles= mobiles
-        this.totalPrice
+        this.totalPrice =this.totalPriceCalculation()
+      
     }
 
 //getter
@@ -49,7 +54,7 @@ export class Library{
        this.totalPrice = totalMobilesNew
    }
    // funciones
-   public totalPriceCalculation()
+  private totalPriceCalculation():number
    {   
     let sumaPrice:number=0
     for (let i=0;i<this.mobiles.length; i++)
@@ -61,10 +66,18 @@ export class Library{
          return sumaPrice
         
    }
-   public allPrint():string{
-   return
-}
+   public printLibrary():string{
+       for(let i=0; i<this.mobiles.length; i++)
+    return "The characteristics of the mobile " + this.mobiles[i].getName() +" are:" +"\n"+
+        "Name: " + this.mobiles[i].getName() + "\n"+ 
+        "Model: " + this.mobiles[i].getModel() + "\n" +
+        "TradeMark: " + this.mobiles[i].getTrademark()+ "\n" + 
+        "SD Size(GB): " + this.mobiles[i].getSdSize()+ "\n"+
+        "Color: " + this.mobiles[i].getColor() + "\n" + 
+        "Is 5g?: "+ this.mobiles[i].getIs5G() + "\n"+
+        "Number of Cameras: " + this.mobiles[i].getCameraNumber() + "\n" +
+        "Price overal: " + this.totalPrice
 
 }
 
-
+}
