@@ -1,0 +1,11 @@
+"use strict";
+exports.__esModule = true;
+var Mobile_1 = require("./Mobile");
+var mobileLibrary_1 = require("./mobileLibrary");
+var nokia = new Mobile_1.Mobile("Nokia 3210", "3210", "Nokia", 3, "black", false, 0, 100);
+var iphone = new Mobile_1.Mobile("Iphone3G", "3G", "Apple", 12, "white", false, 2, 200);
+var samsung = new Mobile_1.Mobile("Samsung S10", "S10", "Samsung", 128, "black", false, 3, 300);
+var xiaomi = new Mobile_1.Mobile("xiaomi note 9", "note 9", "Xiamomi", 100, "black", true, 7, 800);
+var mobiles = [nokia, samsung, iphone, xiaomi];
+var library1 = new mobileLibrary_1.Library("libreria1", "calle Mayor", mobiles);
+console.log(library1.totalPriceCalculation());
